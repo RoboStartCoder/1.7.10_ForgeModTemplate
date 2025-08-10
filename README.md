@@ -2,10 +2,9 @@
 
 ### Create workspace steps:
 - Fork this repository and clone to your device
+- [Set the JAVA_HOME to the Java 8](https://www.youtube.com/watch?v=-dcNgBN44ss)
+- Open cmd in project folder
+- Run `gradlew setupDecompWorkspace`
+- After, run `gradlew idea`
 - Open project in Intellij IDEA
-- Open gradle tab and run `Tasks > forgegradle > setupDecompWorkspace`
-- Then close Intellij IDEA and open cmd in project folder
-- Run `gradlew idea` (Make sure that the [JAVA_HOME](https://www.youtube.com/watch?v=-dcNgBN44ss) points to the Java 8)
-- After, delete `.idea` folder from project folder
-- Open project
 - Done!
