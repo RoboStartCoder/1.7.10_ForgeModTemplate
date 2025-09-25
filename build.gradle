@@ -2,22 +2,12 @@ buildscript {
     repositories {
         mavenCentral()
         maven {
-            name = "maven"
-            url = "https://repo1.maven.org/maven2"
-        }
-        maven {
-            name = "sonatype"
-            url = "https://oss.sonatype.org/content/repositories/snapshots/"
-        }
-        maven {
-            name = "forge"
-            url = "https://repo.spongepowered.org/repository/forge-proxy"
+            name = "github"
+            url = "https://github.com/juanmuscaria/maven/raw/master"
         }
     }
     dependencies {
-        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.1.+') {
-            changing = true
-        }
+        classpath 'net.minecraftforge.gradle:ForgeGradle:[1.2-1.4.6-SNAPSHOT,)'
     }
 }
 
@@ -31,8 +21,7 @@ targetCompatibility = sourceCompatibility = JavaVersion.VERSION_1_8
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
-    runDir = "eclipse"
-    mappings = "stable_12"
+    runDir = "run"
 }
 
 tasks.withType(JavaCompile) {
